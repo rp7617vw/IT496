@@ -1,0 +1,13 @@
+<?php
+date_default_timezone_set('UTC');
+$todayDate = date('Y-m-d');
+//echo abs(strtotime($todayDate));
+$finalDate = '2015-05-08';
+DaysLeft($todayDate, $finalDate);
+
+function DaysLeft($today,$final){
+	$daysRem = abs(strtotime($today) - strtotime($final));
+	//echo"Days until Final: ".floor($daysRem/(60*60*24));
+	echo "days left ".idate("z", $daysRem);
+	}
+?>
